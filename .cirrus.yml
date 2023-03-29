@@ -1,0 +1,4 @@
+test_task:
+  container:
+    image: opencfd/openfoam2112-dev
+  test_script: ls /usr/lib/openfoam/openfoam2212/etc/
