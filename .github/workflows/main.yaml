@@ -14,11 +14,11 @@ jobs:
           run: |
             curl -s https://dl.openfoam.com/add-debian-repo.sh | sudo bash
             sudo apt-get install openfoam2212-dev
-            . /usr/lib/openfoam/openfoam2212/etc/bashrc
         - name: Checkout
           uses: actions/checkout@v3
           with:
             fetch-depth: 1
         - name: Compile
           run: |
+            . /usr/lib/openfoam/openfoam2212/etc/bashrc
             wmake
