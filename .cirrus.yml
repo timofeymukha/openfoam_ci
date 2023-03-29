@@ -4,5 +4,4 @@ test_task:
   test_script: 
     - ls .
     - ls /usr/lib/openfoam/openfoam2112/etc
-    - bash /usr/lib/openfoam/openfoam2112/etc/bashrc
-    - wmake
+    - . /usr/lib/openfoam/openfoam2112/etc/bashrc
