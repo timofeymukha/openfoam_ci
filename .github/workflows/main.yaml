@@ -13,7 +13,7 @@ jobs:
         - name: Setup env.
           uses: wei/wget@v1
           with:
-             args: https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker ${{ github.workspace }}
+             args: -O ${{ github.workspace }}/openfoam-docker https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker 
         - name: Checkout
           uses: actions/checkout@v3
           with:
