@@ -17,5 +17,5 @@ jobs:
             fetch-depth: 1
         - name: Compile
           run: |
-           ls /usr/lib/openfoam/
+           bash /usr/lib/openfoam/openfoam2212/etc/bashrc
 
