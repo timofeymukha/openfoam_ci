@@ -4,4 +4,4 @@ test_task:
   test_script: 
     - ls .
     - ls /usr/lib/openfoam/openfoam2112/etc
-    - source /usr/lib/openfoam/openfoam2112/etc/bashrc
+    - bash /usr/lib/openfoam/openfoam2112/etc/bashrc
