@@ -12,16 +12,15 @@ jobs:
       steps:
         - name: Setup env.
           run: |
-            curl -s https://dl.openfoam.com/add-debian-repo.sh | sudo bash
-            sudo apt-get install openfoam2212-dev
+            # curl -s https://dl.openfoam.com/add-debian-repo.sh | sudo bash
+            # sudo apt-get install openfoam2212-dev
+            wget https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker
+            chmod +x openfoam-docker
         - name: Checkout
           uses: actions/checkout@v3
           with:
             fetch-depth: 1
-        - name : ls
-          run: |
-            ls /usr/lib/openfoam/openfoam2212/etc/
         - name: Compile
           run: |
-            openfoam2212
-            wmake
+            openfoam-docker / wmake
+
