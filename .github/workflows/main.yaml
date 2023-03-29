@@ -14,7 +14,7 @@ jobs:
           run: |
             curl -s https://dl.openfoam.com/add-debian-repo.sh | sudo bash
             sudo apt-get install openfoam2212-dev
-            source /usr/lib/openfoam/openfoam2212/etc/bashrc
+            . /usr/lib/openfoam/openfoam2212/etc/bashrc
         - name: Checkout
           uses: actions/checkout@v3
           with:
