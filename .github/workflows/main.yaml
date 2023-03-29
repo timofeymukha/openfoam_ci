@@ -9,16 +9,13 @@ jobs:
   v2212:
       name: "v2212"
       runs-on: ubuntu-20.04
+      container: opencfd/openfoam2112-dev
       steps:
-        - name: Setup env.
-          uses: wei/wget@v1
-          with:
-             args: -O ${{ github.workspace }}/openfoam-docker https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker 
         - name: Checkout
           uses: actions/checkout@v3
           with:
             fetch-depth: 1
         - name: Compile
           run: |
-            ${{ github.workspace }}/openfoam-docker / wmake
+            wmake
 
