@@ -23,5 +23,5 @@ jobs:
             ls /usr/lib/openfoam/openfoam2212/etc/
         - name: Compile
           run: |
-            . /usr/lib/openfoam/openfoam2212/etc/bashrc
+            openfoam2212
             wmake
