@@ -11,10 +11,9 @@ jobs:
       runs-on: ubuntu-20.04
       steps:
         - name: Setup env.
-          run: |
-            # curl -s https://dl.openfoam.com/add-debian-repo.sh | sudo bash
-            # sudo apt-get install openfoam2212-dev
-            wget https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker ${{ github.workspace }}
+          uses: wei/wget@v1
+          with:
+             args: https://develop.openfoam.com/packaging/containers/-/raw/main/openfoam-docker ${{ github.workspace }}
         - name: Checkout
           uses: actions/checkout@v3
           with:
