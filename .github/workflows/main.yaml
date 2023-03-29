@@ -22,5 +22,5 @@ jobs:
             fetch-depth: 1
         - name: Compile
           run: |
-            openfoam-docker / wmake
+            ./openfoam-docker / wmake
 
