@@ -10,10 +10,13 @@ jobs:
       name: "v2212"
       runs-on: ubuntu-22.04
       steps:
+      - uses: actions/checkout@v2
+      
       - name: Install OpenFOAM
         run: |
           wget -q -O - https://dl.openfoam.com/add-debian-repo.sh | sudo bash
           sudo apt-get install -qq openfoam2212-dev  
-      - name: Build OpenQBMM
+          
+      - name: Build application
         run: /usr/bin/openfoam2212 wmake -j
 
