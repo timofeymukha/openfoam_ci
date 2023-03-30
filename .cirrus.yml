@@ -1,4 +1,11 @@
-test_task:
+compile_v2212:
+  container:
+    image: gcc
+  test_script: 
+    - wget -q -O - https://dl.openfoam.com/add-debian-repo.sh | sudo bash
+    - sudo apt-get install -qq openfoam${OF_VERS}-default
+    - /usr/bin/openfoam2112 wmake
+compile_v2112:
   container:
     image: opencfd/openfoam2112-dev
   test_script: 
