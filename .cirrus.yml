@@ -2,8 +2,8 @@ v2212_task:
   container:
     image: gcc
   test_script: 
-    - wget -q -O - https://dl.openfoam.com/add-debian-repo.sh | sudo bash
-    - sudo apt-get install -qq openfoam${OF_VERS}-default
+    - wget -q -O - https://dl.openfoam.com/add-debian-repo.sh | bash
+    - apt-get install -qq openfoam${OF_VERS}-default
     - /usr/bin/openfoam2112 wmake
 v2112_task:
   container:
