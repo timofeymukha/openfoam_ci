@@ -1,3 +1,8 @@
+latest_task:
+  container:
+    image: opencfd/openfoam-dev:latest
+  test_script:
+    - /usr/bin/openfoam2212 wmake
 v2212_task:
   container:
     image: ubuntu:jammy
