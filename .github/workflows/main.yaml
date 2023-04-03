@@ -19,4 +19,24 @@ jobs:
           
       - name: Build application
         run: /usr/bin/openfoam2212 wmake -j
+  v10:
+      name: "v10"
+      runs-on: ubuntu-22.04
+      steps:
+      - uses: actions/checkout@v2
+      
+      - name: Install OpenFOAM
+        run: |
+          sudo sh -c "wget -O - https://dl.openfoam.org/gpg.key > /etc/apt/trusted.gpg.d/openfoam.asc"
+          sudo add-apt-repository http://dl.openfoam.org/ubuntu 
+          sudo apt-get update
+          sudo apt-get -y install openfoam10
+          
+      - name: Build application
+        run: |
+          source /opt/openfoam10/etc/bashrc
+          wmake
+        
+        
+        
 
