@@ -3,17 +3,13 @@ latest_task:
     image: opencfd/openfoam-dev:latest
   test_script:
     - /usr/bin/openfoam2212 wmake
-v2212_task:
+v2206_task:
   container:
-    image: ubuntu:jammy
+    image: opencfd/openfoam-dev:2206
   test_script:
-    - apt-get update
-    - apt-get install -y wget 
-    - wget -q -O - https://dl.openfoam.com/add-debian-repo.sh | bash
-    - apt-get install -qq openfoam2212-dev
-    - /usr/bin/openfoam2212 wmake
+    - /usr/bin/openfoam2206 wmake
 v2112_task:
   container:
-    image: opencfd/openfoam2112-dev
+    image: opencfd/openfoam-dev:2112
   test_script: 
     - /usr/bin/openfoam2112 wmake
