@@ -2,14 +2,14 @@ latest_task:
   container:
     image: opencfd/openfoam-dev:latest
   test_script:
-    - /usr/bin/openfoam2212 wmake
+    - /usr/bin/openfoam wmake
 v2206_task:
   container:
     image: opencfd/openfoam-dev:2206
   test_script:
-    - /usr/bin/openfoam2206 wmake
+    - /usr/bin/openfoam wmake
 v2112_task:
   container:
     image: opencfd/openfoam-dev:2112
   test_script: 
-    - /usr/bin/openfoam2112 wmake
+    - /usr/bin/openfoam wmake
