@@ -1,7 +1,6 @@
 # openfoam_ci
-![example workflow](https://github.com/timofeymukha/openfoam_ci/actions/workflows/main.yaml/badge.svg)
-[![Ciruss CI](https://api.cirrus-ci.com/github/timofeymukha/poenfoam_ci.svg)](https://cirrus-ci.com/github/timofeymukha/openfoam_ci)
-
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/timofeymukha/openfoam_ci/main.yaml?label=Github%20Actions)
+![Cirrus CI - Base Branch Build Status](https://img.shields.io/cirrus/github/timofeymukha/openfoam_ci?label=Cirrus%20CI)
 
 
 Demonstrating how one can use CI tools to test openfoam code compilation.
